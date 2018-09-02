@@ -22,7 +22,7 @@ class Api::ProductsController < ApplicationController
   end
 
   def update
-    @product =Product.find(params[:id])
+    @product = Product.find(params[:id])
 
     @product.name = params[:name] || @product.name
     @product.price = params[:price] || @product.price
@@ -38,6 +38,4 @@ class Api::ProductsController < ApplicationController
     @product.destroy
     render json: {message: "Product successfully destroyed."}
   end
-  
-
 end
